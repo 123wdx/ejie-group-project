@@ -120,7 +120,7 @@ export const asyncRoutes = [
   {
     path: '/check',
     component: Layout,
-    meta:{title:"审核管理", icon: 'tab' },
+    meta:{title:"审核管理", icon: 'zip' },
     children: [
       {
         path: 'waiter',
@@ -144,7 +144,7 @@ export const asyncRoutes = [
         path: 'order',
         component: () => import('@/pages/order/Order'),
         name: 'customer',
-        meta: { title: '订单管理', icon: 'tab' }
+        meta: { title: '订单管理', icon: 'pdf' }
       },
       {
         path: 'details',
@@ -163,7 +163,7 @@ export const asyncRoutes = [
         path: 'waiter',
         component: () => import('@/pages/waiter/Waiter'),
         name: 'customer',
-        meta: { title: '员工管理', icon: 'tab' }
+        meta: { title: '员工管理', icon: 'icon' }
       },
     ]
   } ,
