@@ -158,16 +158,10 @@ export const asyncRoutes = [
       {
         path: 'order',
         component: () => import('@/pages/order/Order'),
-        name: 'customer',
+        name: 'order',
         meta: { title: '订单管理', icon: 'pdf' }
       },
-      {
-        path: 'details',
-        hidden:true,
-        component: () => import('@/pages/order/Details'),
-        name: 'details',
-        meta: { title: '订单详情', icon: 'tab' }
-      }
+      
     ]
   } ,
   {

@@ -35,6 +35,7 @@ export default {
   },
   methods:{
     ...mapActions("customer",["findAllCustomers"]),
+    
     // 普通方法
     toDetailsHandler(customer){
       //跳转到详情页面
