@@ -118,22 +118,35 @@ export const asyncRoutes = [
     ]
   } ,
   {
-    path: '/check',
+    path: '/product',
     component: Layout,
-    meta:{title:"审核管理", icon: 'zip' },
     children: [
       {
-        path: 'waiter',
-        component: () => import('@/pages/check/WaiterCheck'),
-        name: 'waiter',
-        meta: { title: '员工审核', icon: 'tab' }
+        path: 'product',
+        component: () => import('@/pages/product/Product'),
+        name: 'product',
+        meta: { title: '产品管理', icon: 'tab' }
       },
       {
-        path: 'withdraw',
-        component: () => import('@/pages/check/WithdrawCheck'),
-        name: 'withdraw',
-        meta: { title: '提现审核', icon: 'tab' }
+        path: 'details',
+        hidden:true,
+        component: () => import('@/pages/product/Details'),
+        name: 'details',
+        meta: { title: '产品详情', icon: 'tab' }
       }
+    ]
+  } ,
+  {
+    path: '/category',
+    component: Layout,
+    children: [
+      {
+        path: 'category',
+        component: () => import('@/pages/category/Category'),
+        name: 'category',
+        meta: { title: '栏目管理', icon: 'tab' }
+      },
+  
     ]
   } ,
   {
@@ -158,6 +171,7 @@ export const asyncRoutes = [
   {
     path: '/waiter',
     component: Layout,
+    
     children: [
       {
         path: 'waiter',
@@ -165,13 +179,41 @@ export const asyncRoutes = [
         name: 'customer',
         meta: { title: '员工管理', icon: 'icon' }
       },
+      {
+        path: 'details',
+        component: () => import('@/pages/waiter/Details'),
+        hidden:true,
+        name: 'details',
+        meta: { title: '员工详情', icon: 'icon' }
+      }
+
     ]
   } ,
+  {
+    path: '/check',
+    component: Layout,
+    meta:{title:"审核管理", icon: 'zip' },
+    children: [
+      {
+        path: 'waiter',
+        component: () => import('@/pages/check/WaiterCheck'),
+        name: 'waiter',
+        meta: { title: '员工审核', icon: 'tab' }
+      },
+      {
+        path: 'withdraw',
+        component: () => import('@/pages/check/WithdrawCheck'),
+        name: 'withdraw',
+        meta: { title: '提现审核', icon: 'tab' }
+      }
+    ]
+  } ,
+  
   
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
-/*
+/*,
 export const asyncRoutes = [
   {
     path: '/permission',
