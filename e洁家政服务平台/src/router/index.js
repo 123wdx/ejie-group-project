@@ -118,34 +118,36 @@ export const asyncRoutes = [
     ]
   } ,
   {
-    path: '/product',
+    path: '/systom',
     component: Layout,
+    meta:{title:"系统管理", icon: 'zip' },
     children: [
       {
         path: 'product',
-        component: () => import('@/pages/product/Product'),
+        component: () => import('@/pages/systom/Product'),
         name: 'product',
         meta: { title: '产品管理', icon: 'tab' }
       },
       {
         path: 'details',
         hidden:true,
-        component: () => import('@/pages/product/Details'),
+        component: () => import('@/pages/systom/Details'),
         name: 'details',
         meta: { title: '产品详情', icon: 'tab' }
-      }
+      },
+      {
+        path: 'category',
+        component: () => import('@/pages/systom/Category'),
+        name: 'category',
+        meta: { title: '栏目管理', icon: 'tab' }
+      },
     ]
   } ,
   {
     path: '/category',
     component: Layout,
     children: [
-      {
-        path: 'category',
-        component: () => import('@/pages/category/Category'),
-        name: 'category',
-        meta: { title: '栏目管理', icon: 'tab' }
-      },
+      
   
     ]
   } ,
