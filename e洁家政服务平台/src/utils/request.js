@@ -80,6 +80,18 @@ export function post(url,data){
     }
   })
 }
+//自定义get
+export function get (url,params) {
+  return service.get(url,{
+    params,   //get请求时带的参数
+    timeout:10000,
+    headers: {
+      'X-Requested-With': 'XMLHttpRequest',
+    }
+
+  })
+}
+
 
 /**
  * 提交post请求 发送的数据为查询字符串，当参数为数组的时候适用该方法
